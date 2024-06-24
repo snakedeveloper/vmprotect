@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  createCard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or Update Project Card
+        uses: peter-evans/create-or-update-project-card@v3
+        with:
+          project-location: snakedeveloper
+          project-number: 2
+          column-name: Todo
